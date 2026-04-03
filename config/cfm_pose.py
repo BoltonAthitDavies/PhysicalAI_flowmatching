@@ -26,7 +26,7 @@ base = {
         'use_wavelet': False,
         'cont': None,
         ## serialization
-        'logbase': 'logs/pose_trajectory',
+        'logbase': 'logs/pose_trajectory_athit',
         'prefix': 'cfm/',
         'exp_name': watch(diffusion_args_to_watch),
         ## training

@@ -31,7 +31,7 @@ def load_npz_to_dataframe(filename: str, include_targets: bool = True):
     
     return df
 
-poseTraject_df = load_npz_to_dataframe("/home/bubble/PhysicalAI_flowmatching/data/pose_traject_dataset_2000x50_0.npz")
+poseTraject_df = load_npz_to_dataframe("/home/bubble/PhysicalAI_flowmatching/data/pose_traject_dataset.npz")
 
 # 1. One-hot encode : This creates the 3D one-hot vector part = {Accel, Const, Decel} [2]
 part_onehot = pd.get_dummies(poseTraject_df['part_enum'].astype(int), prefix='part').values
@@ -157,7 +157,7 @@ trainer_config = utils.Config(
     savepath=(args.savepath, 'trainer_config.pkl'),
     train_batch_size=args.batch_size,
     train_lr=args.learning_rate,
-    gradient_accumulate_every=args.gradient_accumulate_every,
+    gradient_accumulate_every=args.gradient_accumulate_evP" ery,
     ema_decay=args.ema_decay,
     sample_freq=0,  # disable rendering (no renderer for this dataset)
     save_freq=args.save_freq,
