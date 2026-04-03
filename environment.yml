@@ -7,7 +7,7 @@ dependencies:
   - _openmp_mutex=5.1=1_gnu
   - abseil-cpp=20211102.0=h27087fc_1
   - absl-py=1.4.0=pyhd8ed1ab_0
-  - aiohttp=3.8.1=py38h0a891b7_1
+  - aiohttp=3.8.1
   - aiosignal=1.3.1=pyhd8ed1ab_0
   - asttokens=2.2.1=pyhd8ed1ab_0
   - async-timeout=4.0.2=pyhd8ed1ab_0
@@ -16,16 +16,16 @@ dependencies:
   - backports=1.0=pyhd8ed1ab_3
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
   - blinker=1.6.2=pyhd8ed1ab_0
-  - brotlipy=0.7.0=py38h0a891b7_1004
+  - brotlipy=0.7.0
   - c-ares=1.19.0=h5eee18b_0
   - ca-certificates=2022.12.7=ha878542_0
   - cachetools=5.3.0=pyhd8ed1ab_0
   - certifi=2022.12.7=pyhd8ed1ab_0
-  - debugpy=1.5.1=py38h295c915_0
+  - debugpy=1.5.1
   - decorator=5.1.1=pyhd8ed1ab_0
   - entrypoints=0.4=pyhd8ed1ab_0
   - executing=1.2.0=pyhd8ed1ab_0
-  - frozenlist=1.3.3=py38h5eee18b_0
+  - frozenlist=1.3.3
   - google-auth-oauthlib=1.0.0=pyhd8ed1ab_0
   - grpc-cpp=1.48.2=h5bf31a4_0
   - idna=3.4=pyhd8ed1ab_0
@@ -33,7 +33,7 @@ dependencies:
   - ipython=8.11.0=pyh41d4057_0
   - jedi=0.18.2=pyhd8ed1ab_0
   - jupyter_client=7.0.6=pyhd8ed1ab_0
-  - jupyter_core=5.2.0=py38h578d9bd_0
+  - jupyter_core=5.2.0
   - ld_impl_linux-64=2.38=h1181459_1
   - libblas=3.9.0=15_linux64_openblas
   - libcblas=3.9.0=15_linux64_openblas
@@ -49,7 +49,7 @@ dependencies:
   - libstdcxx-ng=11.2.0=h1234567_1
   - markdown=3.4.3=pyhd8ed1ab_0
   - matplotlib-inline=0.1.6=pyhd8ed1ab_0
-  - multidict=6.0.2=py38h5eee18b_0
+  - multidict=6.0.2
   - ncurses=6.4=h6a678d5_0
   - nest-asyncio=1.5.6=pyhd8ed1ab_0
   - oauthlib=3.2.2=pyhd8ed1ab_0
@@ -59,7 +59,7 @@ dependencies:
   - patchelf=0.17.2=h6a678d5_0
   - pexpect=4.8.0=pyh1a96a4e_2
   - pickleshare=0.7.5=py_1003
-  - pip=22.3.1=py38h06a4308_0
+  - pip=22.3.1
   - platformdirs=3.1.0=pyhd8ed1ab_0
   - prompt-toolkit=3.0.38=pyha770c72_0
   - prompt_toolkit=3.0.38=hd8ed1ab_0
@@ -69,30 +69,30 @@ dependencies:
   - pycparser=2.21=pyhd8ed1ab_0
   - pygments=2.14.0=pyhd8ed1ab_0
   - pysocks=1.7.1=pyha2e5f31_6
-  - python=3.8.16=h7a1cb2a_3
+  - python=3.9
   - python-dateutil=2.8.2=pyhd8ed1ab_0
-  - python_abi=3.8=2_cp38
+  - python_abi=3.9
   - pyu2f=0.1.5=pyhd8ed1ab_0
-  - pyzmq=19.0.2=py38ha71036d_2
+  - pyzmq=19.0.2
   - re2=2022.04.01=h27087fc_0
   - readline=8.2=h5eee18b_0
   - requests-oauthlib=1.3.1=pyhd8ed1ab_0
-  - setuptools=65.6.3=py38h06a4308_0
+  - setuptools=65.6.3
   - six=1.16.0=pyh6c4a22f_0
   - sqlite=3.40.1=h5082296_0
   - stack_data=0.6.2=pyhd8ed1ab_0
   - tensorboard=2.12.2=pyhd8ed1ab_0
-  - tensorboard-data-server=0.7.0=py38h52d8a92_0
+  - tensorboard-data-server=0.7.0
   - tensorboard-plugin-wit=1.8.1=pyhd8ed1ab_0
   - tk=8.6.12=h1ccaba5_0
-  - tornado=6.1=py38h0a891b7_3
+  - tornado=6.1
   - traitlets=5.9.0=pyhd8ed1ab_0
   - typing_extensions=4.4.0=pyha770c72_0
   - wcwidth=0.2.6=pyhd8ed1ab_0
   - werkzeug=2.1.2=pyhd8ed1ab_1
-  - wheel=0.38.4=py38h06a4308_0
+  - wheel=0.38.4
   - xz=5.2.10=h5eee18b_1
-  - yarl=1.7.2=py38h0a891b7_2
+  - yarl=1.7.2
   - zeromq=4.3.4=h9c3ff4c_1
   - zipp=3.15.0=pyhd8ed1ab_0
   - zlib=1.2.13=h5eee18b_0
@@ -113,7 +113,7 @@ dependencies:
     - azure-mgmt-resource==10.2.0
     - azure-mgmt-storage==11.2.0
     - azure-storage-blob==12.4.0
-    - basemap==1.3.6
+    - basemap==1.4.1
     - basemap-data==1.3.2
     - bcrypt==4.0.1
     - beautifulsoup4==4.11.2
@@ -122,7 +122,7 @@ dependencies:
     - botocore==1.29.84
     - cffi==1.15.1
     - charset-normalizer==3.0.1
-    - chex==0.1.6
+    - chex==0.1.84
     - click==8.0.4
     - cloudpickle==1.6.0
     - colorama==0.4.4
@@ -143,7 +143,7 @@ dependencies:
     - ffmpeg==1.4
     - ffprobe==0.5
     - filelock==3.9.0
-    - flax==0.4.0
+    - flax==0.7.5
     - fonttools==4.38.0
     - future==0.18.3
     - gdown==4.6.4
@@ -169,8 +169,8 @@ dependencies:
     - importlib-metadata==6.0.0
     - importlib-resources==5.12.0
     - isodate==0.6.1
-    - jax==0.2.21
-    - jaxlib==0.4.4
+    - jax==0.4.20
+    - jaxlib==0.4.20
     - jmespath==1.0.1
     - jsonschema==4.17.3
     - kiwisolver==1.4.4
@@ -187,13 +187,13 @@ dependencies:
     - mujoco-py==2.1.2.14
     - mypy-extensions==1.0.0
     - networkx==3.0
-    - numpy==1.23.5
+    - numpy==1.24.4
     - nvidia-cublas-cu11==11.10.3.66
     - nvidia-cuda-nvrtc-cu11==11.7.99
     - nvidia-cuda-runtime-cu11==11.7.99
     - nvidia-cudnn-cu11==8.5.0.96
     - opt-einsum==3.3.0
-    - optax==0.1.4
+    - optax==0.1.7
     - pandas==1.5.3
     - paramiko==2.12.0
     - pathtools==0.1.2
@@ -242,4 +242,3 @@ dependencies:
     - urllib3==1.26.14
     - virtualenv==20.20.0
     - wandb==0.13.10
-prefix: /nethome/sye40/anaconda3/envs/diffuser
