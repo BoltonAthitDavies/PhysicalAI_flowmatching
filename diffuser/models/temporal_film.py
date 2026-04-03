@@ -126,15 +126,18 @@ class ConditionalUnet1D(nn.Module):
         #     global_feature_cond_dim = lstm_out_dim + cond_dim
         # else:
         #     global_feature_cond_dim = cond_dim
-        
-        if encoder_type == 'lstm':
-            self.film_encoder = EncoderRNN(input_dim=lstm_in_dim, hidden_dim = lstm_out_dim, num_layers = 1)
-            self.film_encoder.flatten_parameters()
+
+        if lstm_out_dim is not None:
+            if encoder_type == 'lstm':
+                self.film_encoder = EncoderRNN(input_dim=lstm_in_dim, hidden_dim = lstm_out_dim, num_layers = 1)
+                self.film_encoder.flatten_parameters()
+            else:
+                self.film_encoder = nn.Sequential(
+                    nn.Linear(4, lstm_out_dim),
+                    nn.Mish(),
+                    nn.Linear(lstm_out_dim, lstm_out_dim))
         else:
-            self.film_encoder = nn.Sequential(
-                nn.Linear(4, lstm_out_dim),
-                nn.Mish(),
-                nn.Linear(lstm_out_dim, lstm_out_dim))
+            self.film_encoder = None
 
 
         in_out = list(zip(all_dims[:-1], all_dims[1:]))
@@ -248,15 +251,15 @@ class ConditionalUnet1D(nn.Module):
         global_feature = self.diffusion_step_encoder(timesteps)
 
         # print(global_cond)
-        if global_cond is not None:               
+        if global_cond is not None:
             if 'hideouts' in global_cond.keys():
                 global_feature = torch.cat([global_cond['hideouts'], global_feature], axis=-1)
 
-            if 'detections' in global_cond.keys():
+            if 'detections' in global_cond.keys() and self.film_encoder is not None:
                 detections_encoded = self.film_encoder(global_cond['detections'])
                 global_feature = torch.cat([detections_encoded, global_feature], axis=-1)
 
-            if 'class' in global_cond.keys():
+            if 'class' in global_cond.keys() and self.film_encoder is not None:
                 encoded = self.film_encoder(global_cond['class'])
                 global_feature = torch.cat([encoded, global_feature], axis=-1)
 
