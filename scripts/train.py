@@ -186,8 +186,8 @@ utils.report_parameters(model)
 #--------------------------------- main loop ---------------------------------#
 #-----------------------------------------------------------------------------#
 
-# n_epochs = int(args.n_train_steps // args.n_steps_per_epoch)
-n_epochs = 1
+n_epochs = int(args.n_train_steps // args.n_steps_per_epoch)
+# n_epochs = 1
 
 for i in range(n_epochs):
     print(f'Epoch {i} / {n_epochs} | {args.savepath}')
