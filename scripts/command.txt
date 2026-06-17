@@ -3,6 +3,6 @@ cd /home/bubble/PhysicalAI_flowmatching
 python scripts/train.py --config config.cfm_pose
 
 # visualize on tensorboard 
-tensorboard --logdir logs/pose_trajectory
+tensorboard --logdir logs/pose_trajectory_pnut
 
 # 

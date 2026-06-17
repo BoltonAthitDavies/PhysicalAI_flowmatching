@@ -15,7 +15,10 @@ base = {
         'model': 'models.ConditionalUnet1D',
         'diffusion': 'models.CFM',
         'horizon': 64,
-        'global_cond_dim': 9,
+        # 'global_cond_dim': 9,
+        # 'global_cond_dim': 8,
+        # 'global_cond_dim': 11,
+        'global_cond_dim': 13,
         'n_diffusion_steps': 100,
         'action_weight': 1,
         'loss_weights': None,
@@ -26,7 +29,7 @@ base = {
         'use_wavelet': False,
         'cont': None,
         ## serialization
-        'logbase': 'logs/pose_trajectory_athit',
+        'logbase': 'logs/pose_trajectory_3D_multiinit',
         'prefix': 'cfm/',
         'exp_name': watch(diffusion_args_to_watch),
         ## training
